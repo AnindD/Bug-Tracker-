@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block body%}
+<h3><b>Dashboard</b></h3>
+<p>Welcome to your dashboard, this is where you will be able to see all of the bugs that users have inputted.</p>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class ="list-group-item">{{note.data}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

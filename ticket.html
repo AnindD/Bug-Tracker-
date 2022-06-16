@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block body%}
+<form method="POST">
+    <h3>Bug Ticketer</h3>
+    
+    <div class="form-group">
+        <br>
+        <label for="Title"><b>Title</b></label>
+        <input class="form-control  form-control-lg" type="text" id="bug_title" name="bug_title" placeholder="Title">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="bug_response"><b>Write</b></label>
+        <textarea class="form-control" id="bug_response" name="bug_response" rows="20"></textarea>
+      </div>
+    <label class="btn btn-light" for="my-file-selector">
+        <input id="my-file-selector" type="file" style="display:none" 
+        onchange="$('#upload-file-info').text(this.files[0].name)">
+        Attach File
+    </label>
+    <span class='label label-info' id="upload-file-info"></span>
+    <br> 
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="severity"><b>Severity</b></label>
+            <select class="form-control">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>Serious</option>
+            </select>
+        </div>
+
+    </div>
+    <div>
+        <button class="btn btn-primary">Submit Issue</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</form>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block title %}Signup{% endblock %} {% block body
+%}
+<form method="POST">
+    <h3 align="center">Sign Up</h3>
+    <p>Sign here if you would like to become an administrator.</p>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="first_name"><b>First Name</b></label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name"/>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="last_name"><b>Last Name</b></label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="username"><b>Username</b></label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Anonymous</span>
+            </div>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email"><b>Email Address</b></label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"/>
+    </div>
+    <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"/>
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" value="Check" id="terms_conditions_check" name="terms_conditions_check">
+        <label class="form-check-label" for="terms_conditions_check">I agree with the terms and conditions</label>
+    </div>
+    <div>
+        <br />
+        <button type="Submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
