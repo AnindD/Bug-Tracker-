@@ -66,7 +66,6 @@ def bug_ticket():
         print(bug_info)
         print(bug_title) 
         new_bug = Note(data=bug_info, user_id=current_user.id)
-        old_bug = Note.query.filter_by(data="Anindit is a shitty programmer who doesn't know how to code", user_id=current_user.id).first() 
         db.session.add(new_bug)
         db.session.commit() 
     return render_template("ticket.html", user=current_user)
